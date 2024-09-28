@@ -15,7 +15,13 @@ _Hint, search type 1 vs type 2 slowly changing dimensions._
 
 Bonus: Are there privacy implications to this, why or why not?
 ```
-Your answer...
+There are two approaches to managing customer addresses: one that overwrites the address when it changes (Type 1) and one that retains historical address information (Type 2). I uploaded two graphs for these two types. 
+
+Type 1 SCD (Overwriting Changes)
+In this approach, when a customer's address changes, the old address is overwritten by the new one. This means that the database will only store the current address, and previous addresses will not be kept.
+
+Type 2 SCD (Retaining Changes)
+In this approach, each time a customer's address changes, a new record is added to the Customer Address table, keeping the old address as part of the history. The table uses start_date and end_date fields to record when the address was active.
 ```
 
 ## Question 4
