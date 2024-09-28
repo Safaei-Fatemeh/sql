@@ -29,7 +29,8 @@ Review the AdventureWorks Schema [here](https://i.stack.imgur.com/LMu4W.gif)
 
 Highlight at least two differences between it and your ERD. Would you change anything in yours?
 ```
-Your answer...
+This schema is highly normalized and involves many tables for different business operations, such as sales, production, purchasing, and human resources. It also includes schemas for different departments like Sales, Purchasing, and Production, reflecting the larger scale and complexity of operations. But, my ERD is more streamlined with fewer tables. I have basic entities such as Customer, Order, Sales, and Book, and my relationships are straightforward and suitable for managing a small bookstore.
+My design doesn’t need schemas for human resources or production, as these are not relevant to a small bookstore.
 ```
 
 # Criteria
