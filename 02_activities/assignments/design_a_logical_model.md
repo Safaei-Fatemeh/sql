@@ -15,7 +15,13 @@ _Hint, search type 1 vs type 2 slowly changing dimensions._
 
 Bonus: Are there privacy implications to this, why or why not?
 ```
-Your answer...
+There are two approaches to managing customer addresses: one that overwrites the address when it changes (Type 1) and one that retains historical address information (Type 2). I uploaded two graphs for these two types. 
+
+Type 1 SCD (Overwriting Changes)
+In this approach, when a customer's address changes, the old address is overwritten by the new one. This means that the database will only store the current address, and previous addresses will not be kept.
+
+Type 2 SCD (Retaining Changes)
+In this approach, each time a customer's address changes, a new record is added to the Customer Address table, keeping the old address as part of the history. The table uses start_date and end_date fields to record when the address was active.
 ```
 
 ## Question 4
@@ -23,7 +29,8 @@ Review the AdventureWorks Schema [here](https://i.stack.imgur.com/LMu4W.gif)
 
 Highlight at least two differences between it and your ERD. Would you change anything in yours?
 ```
-Your answer...
+This schema is highly normalized and involves many tables for different business operations, such as sales, production, purchasing, and human resources. It also includes schemas for different departments like Sales, Purchasing, and Production, reflecting the larger scale and complexity of operations. But, my ERD is more streamlined with fewer tables. I have basic entities such as Customer, Order, Sales, and Book, and my relationships are straightforward and suitable for managing a small bookstore.
+My design doesn’t need schemas for human resources or production, as these are not relevant to a small bookstore.
 ```
 
 # Criteria
